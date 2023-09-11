@@ -1,0 +1,143 @@
+.full {
+  background-image: url("../../assets/stars1.jpg");
+  color: aliceblue;
+  font-size: 45px !important;
+  z-index: 10;
+  font-weight: 10;
+  letter-spacing: 3px;
+  font-family: "AmstelvarAlpha";
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.full h1:hover {
+  color: rgb(171, 43, 226);
+  font-size: 50px !important;
+}
+.half {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.half .first,
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 7%;
+}
+.sub {
+  z-index: 100;
+  --g: 4px; /* the gap */
+  --b: 5px; /* border thickness */
+  --c: hsl(80, 24%, 88%); /* the color */
+
+  width: 250px; /* Adjust the width and height as needed */
+  height: 250px;
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+
+.sub:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row when there's not enough horizontal space */
+  justify-content: center; /* Center cards horizontally */
+  gap: 100px; /* Adjust the gap between cards */
+}
+/*  */
+
+.sub img {
+  width: 100px;
+}
+
+.sub .para {
+  width: 250px;
+  text-align: center;
+}
+.para p {
+  font-size: 20px;
+}
+.animate-character {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -290deg,
+    #8400ff 0%,
+    #0058aa 29%,
+    #ff1361 67%,
+    hsl(320, 100%, 50%) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 70px;
+  font-weight: 400;
+}
+.grad4 {
+  content: "";
+  width: 100px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: rgb(171, 43, 226);
+  filter: blur(200px);
+  z-index: 10;
+  position: absolute;
+  translate: -10px 10px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@media (max-width: 768px) {
+  .full {
+    height: auto; /* Remove fixed height for smaller screens */
+  }
+
+  .first,
+  .second {
+    flex-direction: column; /* Stack .first and .second vertically */
+  }
+  .animate-charcter {
+    font-size: 35px !important;
+  }
+}
+@media (max-width: 1220px) {
+  /* .full{
+    height: 80vh;
+  } */
+}
+@media (max-width: 767px)
+{
+  .animate-character
+  {
+    font-size: 40px;
+  }
+}

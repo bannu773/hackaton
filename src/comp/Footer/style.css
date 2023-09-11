@@ -1,0 +1,38 @@
+.footer {
+  position: relative;
+  color: aliceblue;
+  font-size: 16px !important;
+  font-weight: 10;
+  letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  font-family: "AmstelvarAlpha";
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  background-color:rgb(32,32,32);
+  gap: 20px;
+  z-index: 100;
+  text-align: center;
+}
+.foot{
+  display: flex;
+  flex-wrap: wrap;
+  width:350px;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+.section
+{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  
+}
+@media (max-width:468px)
+{
+  .footer{
+    font-size: 12px !important;
+  }
+}
